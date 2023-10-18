@@ -14,16 +14,19 @@ namespace prakt_d_6
 
             Console.WriteLine("=== Pirmais uzdevums ===");
 
-            Console.Write("Ievadiet tainstura garumu: ");
+            Console.Write("Ieraksti taisnstūra garumu: ");
             int garums = int.Parse(Console.ReadLine());
+
             int a = 1;
-            
-
-
-            while (a<=garums)
+            while (a <= garums)
             {
-                string zvaigzne = new string('*', a);
-                Console.WriteLine(zvaigzne);
+                int b = 1;
+                while (b <= a)
+                {
+                    Console.Write('*');
+                    b++;
+                }
+                Console.WriteLine();
                 a++;
             }
 
