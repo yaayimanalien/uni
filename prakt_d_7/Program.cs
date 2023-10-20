@@ -67,6 +67,19 @@ namespace prakt_d_7
                 Console.WriteLine("=== 3. uzdevums ===");
                 Console.WriteLine("Ievadiet trīsstūra platumu");
                 int platums = int.Parse(Console.ReadLine());
+                int r = 0;
+
+                while (r<=platums)
+                {
+                    int j = 0;
+                    while (j<=r)
+                    {
+                        Console.Write("*");
+                        j++;
+                    }
+                    Console.Write("\n");
+                    r++;
+                }
             }
         }
     }
