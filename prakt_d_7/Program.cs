@@ -11,13 +11,12 @@ namespace prakt_d_7
         static void Main(string[] args)
         {
 
-            /// VAJAG DO WHILE U STUPID FUCK!!! :))))
             // 1. uzd
             Console.WriteLine("=== 1. uzdevums ===");
 
 
             bool exit = false;
-            while (exit == false)
+            do
             {
                 Console.Write("Ievadies skaitli no 1 līdz 5 vai IZIET lai beigtu darbību");
                 string darbiba = Console.ReadLine();
@@ -45,6 +44,8 @@ namespace prakt_d_7
                         break;
                 }
             }
+            while (exit == false);
+
             // 2. uzd
             Console.WriteLine("=== 2. uzdevums ===");
 
@@ -69,17 +70,14 @@ namespace prakt_d_7
             Console.Write("Ievadiet trīsstūra platumu: ");
             int platums = int.Parse(Console.ReadLine());
             int spaces_left = 0;
-            //int spaces_right = 0;
             int asterisk = platums;
             while (asterisk > 0)
             {
                 Console.Write(new string(' ', spaces_left));
                 Console.Write(new string('*', asterisk));
-                //Console.Write(new string(' ', spaces_right));
                 Console.Write('\n');
                 asterisk -= 2;
                 spaces_left++;
-                //spaces_right++;
             }
         }
     }
