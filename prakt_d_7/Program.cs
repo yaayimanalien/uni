@@ -18,7 +18,7 @@ namespace prakt_d_7
             bool exit = false;
             do
             {
-                Console.Write("Ievadies skaitli no 1 līdz 5 vai IZIET lai beigtu darbību");
+                Console.Write("Ievadies skaitli no 1 līdz 5 vai IZIET lai beigtu darbību ");
                 string darbiba = Console.ReadLine();
 
                 switch (darbiba)
