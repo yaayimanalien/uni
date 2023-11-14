@@ -111,8 +111,8 @@ namespace prakt_d_10
                 }
             }
 
-            Console.WriteLine($"\nmax vērtība = {max}");
-            Console.WriteLine($"min vērtība = {min}");
+            Console.WriteLine($"\nMax vērtība = {max}");
+            Console.WriteLine($"Min vērtība = {min}");
 
             // 4. uzd
 
