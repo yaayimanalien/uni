@@ -23,15 +23,9 @@ namespace prakt_d_9
 
             for (int i = 0; i < simboli.Length; i++)
             {
-                char s = simboli[i];
-                byte[] ASCIIValues = Encoding.ASCII.GetBytes(new char[] { s });
-
-
-                foreach (byte b in ASCIIValues)
-                {
-                    Console.WriteLine($"{simboli[i]}={b}");
-                    summa += b;
-                }
+                int ascii = (int)simboli[i];
+                Console.WriteLine($"{simboli[i]}={ascii}");
+                summa += ascii;
             }
             Console.WriteLine($"Kodu summa: {summa}");
 
@@ -115,17 +109,17 @@ namespace prakt_d_9
             int rem = 0;
             string apvienojums = "";
 
-            for (int i = 0; i < simboli1.Length / 2; i++)
+            for (int i = 0; i < simboli2.Length / 2; i++)
             {
-                apvienojums += simboli1[i];
+                apvienojums += simboli2[i];
                 rem++;
             }
 
-            apvienojums += simboli2;
+            apvienojums += simboli1;
 
-            for (int i = rem; i < simboli1.Length; i++)
+            for (int i = rem; i < simboli2.Length; i++)
             {
-                apvienojums += simboli1[i];
+                apvienojums += simboli2[i];
             }
             Console.WriteLine($"Rindu apvienojums: {apvienojums}");
 
@@ -149,6 +143,5 @@ namespace prakt_d_9
 
             Console.WriteLine($"3. rinda atkārtojas apvienojumā {reizes} reizes.");
         }
-
     }
 }
