@@ -45,7 +45,7 @@ namespace prakt_d_10
 
 
             // 2. uzd
-            Console.WriteLine("=== 2. uzdevums ===");
+            Console.WriteLine("\n=== 2. uzdevums ===");
 
             char[] masivs2 = new char[20];
 
@@ -116,7 +116,7 @@ namespace prakt_d_10
 
             // 4. uzd
 
-            Console.WriteLine("\n=== 4. uzdevums ===");
+            Console.WriteLine("\n=== 4. uzdevums ===\n");
 
             int[] masivs4 = new int[10];
 
