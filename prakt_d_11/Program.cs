@@ -210,8 +210,8 @@ namespace prakt_d_11
 
             //Console.Write("Mazākais skaitlis ir ");
 
-            Console.WriteLine($"mas 1 [0] = {int.Parse(masivs41[0])}");
-            Console.WriteLine($"mas 2 [0] = {int.Parse(masivs42[0])}");
+            //Console.WriteLine($"mas 1 [0] = {int.Parse(masivs41[0])}");
+            //Console.WriteLine($"mas 2 [0] = {int.Parse(masivs42[0])}");
 
             int min1 = 100;
             int max1 = 10;
@@ -248,10 +248,44 @@ namespace prakt_d_11
                 }
             }
 
-            Console.WriteLine($"\n1. mas max = {max1}");
-            Console.WriteLine($"1. mas min = {min1}");
-            Console.WriteLine($"2. mas max = {max2}");
-            Console.WriteLine($"2. mas min = {min2}");
+            Console.Write("Mazākais skaitlis ir ");
+            if (min1<min2)
+            {
+                Console.Write("no pirmā masīva ");
+                min = min1;
+            }
+            else if (min2<min1)
+            {
+                Console.Write("no otrā masīva ");
+                min = min2;
+            }
+            else if (min1==min2)
+            {
+                Console.Write("gan no pirmā, gan no otrā masīva ");
+                min = min1;
+            }
+            Console.Write($"un ir vienāds ar {min}\n");
+
+            int max = 0;
+
+            Console.Write("Lielākais skaitlis ir ");
+            if (max1 < max2)
+            {
+                Console.Write("no pirmā masīva ");
+                max = max1;
+            }
+            else if (max2 < max1)
+            {
+                Console.Write("no otrā masīva ");
+                max = max2;
+            }
+            else if (max1 == max2)
+            {
+                Console.Write("gan no pirmā, gan no otrā masīva ");
+                max = max1;
+            }
+            Console.Write($"un ir vienāds ar {max}\n");
+
         }
     }
 }
