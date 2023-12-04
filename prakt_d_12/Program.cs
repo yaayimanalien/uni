@@ -70,7 +70,11 @@ namespace prakt_d_12
 
             for (int i = 0; i < masivs21.GetLength(0); i++)
             {
-                
+                for (int j = 0; j < masivs21.GetLength(1); j++)
+                {
+                    // min - max comparison
+
+                }
             }
         }
     }
