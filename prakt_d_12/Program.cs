@@ -68,13 +68,35 @@ namespace prakt_d_12
 
             int[,] minmax = new int[2, 10];
 
+
             for (int i = 0; i < masivs21.GetLength(0); i++)
             {
                 for (int j = 0; j < masivs21.GetLength(1); j++)
                 {
                     // min - max comparison
+                    int current = masivs21[i,j];
+                    int min = minmax[0, i];
+                    int max = minmax[1, i];
 
+                    if (current <= min)
+                    {
+                        min = current;
+                    }
+
+                    if (current >= max)
+                    {
+                        max = current;
+                    }
                 }
+            }
+
+            for (int i = 0; i < minmax.GetLength(0); i++)
+            {
+                for (int j = 0; j < minmax.GetLength(1); j++)
+                {
+                    Console.Write($"{minmax[i, j]} \t");
+                }
+                Console.WriteLine();
             }
         }
     }
