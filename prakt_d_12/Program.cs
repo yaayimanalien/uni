@@ -71,33 +71,109 @@ namespace prakt_d_12
 
             for (int i = 0; i < masivs21.GetLength(0); i++)
             {
+                int min = masivs21[i, 0];
+                int max = masivs21[i, 0];
+
                 for (int j = 0; j < masivs21.GetLength(1); j++)
                 {
-                    // min - max comparison
-                    int current = masivs21[i,j];
-                    int min = minmax[0, i];
-                    int max = minmax[1, i];
-
-                    if (current <= min)
+                    if (masivs21[i, j] < min)
                     {
-                        min = current;
+                        min = masivs21[i, j];
                     }
-
-                    if (current >= max)
+                    if (masivs21[i, j] > max)
                     {
-                        max = current;
+                        max = masivs21[i, j];
                     }
                 }
-            }
+                Console.WriteLine($"{i + 1} rindas max vērtība: {max} min vērtība: {min}");
+             }
 
-            for (int i = 0; i < minmax.GetLength(0); i++)
+            int min_total = masivs21[0, 0];  
+            int max_total = masivs21[0, 0];
+
+            for (int i = 0; i < masivs21.GetLength(0); i++)
             {
-                for (int j = 0; j < minmax.GetLength(1); j++)
+                for (int j = 0; j < masivs21.GetLength(1); j++)
                 {
-                    Console.Write($"{minmax[i, j]} \t");
+                    if (masivs21[i, j] < min_total)
+                    {
+                        min_total = masivs21[i, j];
+                    }
+                    if (masivs21[i, j] > max_total)
+                    {
+                        max_total = masivs21[i, j];
+                    }
                 }
-                Console.WriteLine();
             }
+            Console.WriteLine($"Visu vērtību max vērtība: {max_total} min vērtība: {min_total}");
+
+
+            // 3. uzd
+            Console.WriteLine("=== 3. uzdevums ===");
+
+            int[,] masivs31 = new int[10, 10];
+
+            for (int i = 0; i < masivs31.GetLength(0); i++)
+            {
+                for (int j = 0; j < masivs31.GetLength(1); j++)
+                {
+                    masivs31[i, j] = random.Next(1, 10);
+                    Console.Write($"{masivs31[i, j]}  ");
+                }
+                Console.Write("\n");
+            }
+
+            Console.WriteLine();
+            int[,] masivs31_inverted = new int[10, 10];
+
+            for (int i = 0; i < masivs31.GetLength(0); i++)
+            {
+                for (int j = 0; j < masivs31.GetLength(1); j++)
+                {
+                    Console.Write($"{masivs31[j, i]}  ");
+                    masivs31_inverted[i, j] = masivs31[j, i];
+                }
+                Console.Write("\n");
+            }
+
+            // 4. uzd
+            Console.WriteLine("=== 4. uzdevums ===");
+
+            int[,] masivs41 = new int[10, 10];
+
+            for (int i = 0; i < masivs41.GetLength(0); i++)
+            {
+                for (int j = 0; j < masivs41.GetLength(1); j++)
+                {
+                    masivs41[i, j] = random.Next(0, 9);
+                    Console.Write($"{masivs41[i, j]}  ");
+                }
+                Console.Write("\n");
+            }
+
+            for (int i = 0; i < masivs41.GetLength(0); i++)
+            {
+                for (int j = 0; j < masivs41.GetLength(1); j++)
+                {
+                    if (i < j)
+                    {
+                        masivs41[i, j] = 0;
+                    }
+                }
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < masivs41.GetLength(0); i++)
+            {
+                for (int j = 0; j < masivs41.GetLength(1); j++)
+                {
+                    Console.Write($"{masivs41[i, j]}  ");
+                }
+                Console.Write("\n");
+            }
+
+
         }
     }
 }
