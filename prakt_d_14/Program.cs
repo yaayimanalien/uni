@@ -31,7 +31,7 @@ namespace prakt_d_14
                             int sk1 = r.Next(1, 10);
                             int sk2 = r.Next(1, 10);
 
-                            Sub(r, sk1, sk2);
+                            Sub(sk1, sk2);
                         }
 
                         break;
@@ -44,7 +44,7 @@ namespace prakt_d_14
                             int sk1 = r.Next(1, 10);
                             int sk2 = r.Next(1, 10);
 
-                            Sum(r, sk1, sk2);
+                            Sum(sk1, sk2);
                         }
                         
                         break;
@@ -56,30 +56,27 @@ namespace prakt_d_14
                         {
                             int sk1 = r.Next(1, 10);
                             int sk2 = r.Next(1, 10);
-                            Mult(r, sk1, sk2);
+                            Mult(sk1, sk2);
                         }
 
                         break;
                     case 4:
-                        Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaa");
                         Console.Write("Cik piemērus rēķināsiet: "); 
                         int count4 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("eeeeeeeeeeeeeeeeeeeeeeee");
 
                         for (int i = 1; i <= count4; i++)
                         {
                             int sk1 = r.Next(1, 10);
                             int sk2 = r.Next(1, 10);
-                            Div(r, sk1, sk2);
+                            Div(sk1, sk2);
                         }
-                        Console.WriteLine("after for loop");
                         break;
                 }
 
             }
         }
 
-        static void Sub(Random r, int sk1, int sk2)
+        static void Sub(int sk1, int sk2)
         {
                 Console.Write($"{sk1} - {sk2} = ");
                 int input = int.Parse(Console.ReadLine());
@@ -95,7 +92,7 @@ namespace prakt_d_14
 
         
         
-        static void Sum(Random r, int sk1, int sk2)
+        static void Sum(int sk1, int sk2)
         {
 
                 Console.Write($"{sk1} + {sk2} = ");
@@ -112,7 +109,7 @@ namespace prakt_d_14
         }
         
         
-        static void Div(Random r, int sk1, int sk2)
+        static void Div(int sk1, int sk2)
         {
                 int div1 = r.Next(1, 10);
                 int div2 = r.Next(1, 10);
@@ -130,7 +127,7 @@ namespace prakt_d_14
                 }
         }
         
-        static void Mult(Random r, int sk1, int sk2)
+        static void Mult(int sk1, int sk2)
         {
 
                 Console.Write($"{sk1} * {sk2} = ");
