@@ -86,7 +86,7 @@ namespace prakt_d_14
                 }
                 else
                 {
-                    Console.WriteLine("Rezultāts ievadīts nepareizi");
+                    Console.WriteLine($"{sk1}-{sk2}={sk1-sk2}");
                 }
         }
 
@@ -103,16 +103,14 @@ namespace prakt_d_14
                 }
                 else
                 {
-                    Console.WriteLine("Rezultāts ievadīts nepareizi");
+                    Console.WriteLine($"{sk1}+{sk2}={sk1+sk2}");
                 }
             
         }
         
         
-        static void Div(int sk1, int sk2)
+        static void Div(int div1, int div2)
         {
-                int div1 = r.Next(1, 10);
-                int div2 = r.Next(1, 10);
                 int rez = div1 * div2;
                 
                 Console.Write($"{rez} / {div1} = ");
@@ -123,7 +121,7 @@ namespace prakt_d_14
                 }
                 else
                 {
-                    Console.WriteLine("Rezultāts ievadīts nepareizi");
+                    Console.WriteLine($"{rez}/{div1}={div2}");
                 }
         }
         
@@ -138,7 +136,7 @@ namespace prakt_d_14
                 }
                 else
                 {
-                    Console.WriteLine("Rezultāts ievadīts nepareizi");
+                    Console.WriteLine($"{sk1}*{sk2}={sk1*sk2}");
                 }
             
         }
