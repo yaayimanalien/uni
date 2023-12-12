@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace prakt_d_14
 {
@@ -25,29 +22,32 @@ namespace prakt_d_14
                         loopStop = true;
                         break;
                     case 1:
-                        sub(random.Next(1, 10), random.Next(1, 10));
+                        Sub(random);
                         break;
                     case 2:
-                        sum(random.Next(1, 10), random.Next(1, 10));
+                        Sum(random);
                         break;
                     case 3:
-                        mult(random.Next(1, 10), random.Next(1, 10));
+                        Mult(random);
                         break;
                     case 4:
-                        div(random.Next(1, 10), random.Next(1, 10));
+                        Div(random);
                         break;
                 }
 
             }
         }
 
-        static void sub(int sk1, int sk2)
+        static void Sub(Random r)
         {
             Console.Write("Cik piemērus rēķināsiet: ");
             int count = int.Parse(Console.ReadLine());
+            
 
             for (int i = 1; i <= count; i++)
             {
+                int sk1 = r.Next(1, 10);
+                int sk2 = r.Next(1, 10);
                 Console.Write($"{sk1} - {sk2} = ");
                 int input = int.Parse(Console.ReadLine());
                 if (sk1-sk2==input)
@@ -61,17 +61,19 @@ namespace prakt_d_14
             }
 
         }
-
-        static void sum(int sk1, int sk2)
+        
+        static void Sum(Random r)
         {
             Console.Write("Cik piemērus rēķināsiet: ");
             int count = int.Parse(Console.ReadLine());
-
+        
             for (int i = 1; i <= count; i++)
             {
-                Console.Write($"{sk1} - {sk2} = ");
+                int sk1 = r.Next(1, 10);
+                int sk2 = r.Next(1, 10);
+                Console.Write($"{sk1} + {sk2} = ");
                 int input = int.Parse(Console.ReadLine());
-                if (sk1 - sk2 == input)
+                if (sk1 + sk2 == input)
                 {
                     Console.WriteLine("Rezultāts ievadīts pareizi");
                 }
@@ -81,18 +83,22 @@ namespace prakt_d_14
                 }
             }
         }
-
-
-        static void div(int sk1, int sk2)
+        
+        
+        static void Div(Random r)
         {
             Console.Write("Cik piemērus rēķināsiet: ");
             int count = int.Parse(Console.ReadLine());
-
+        
             for (int i = 1; i <= count; i++)
             {
-                Console.Write($"{sk1} / {sk2} = ");
+                int div1 = r.Next(1, 10);
+                int div2 = r.Next(1, 10);
+                int rez = div1 * div2;
+                
+                Console.Write($"{rez} / {div1} = ");
                 int input = int.Parse(Console.ReadLine());
-                if (sk1 / sk2 == input)
+                if (rez / div1 == input)
                 {
                     Console.WriteLine("Rezultāts ievadīts pareizi");
                 }
@@ -102,14 +108,16 @@ namespace prakt_d_14
                 }
             }
         }
-
-        static void mult(int sk1, int sk2)
+        
+        static void Mult(Random r)
         {
             Console.Write("Cik piemērus rēķināsiet: ");
             int count = int.Parse(Console.ReadLine());
-
+        
             for (int i = 1; i <= count; i++)
             {
+                int sk1 = r.Next(1, 10);
+                int sk2 = r.Next(1, 10);
                 Console.Write($"{sk1} * {sk2} = ");
                 int input = int.Parse(Console.ReadLine());
                 if (sk1 * sk2 == input)
