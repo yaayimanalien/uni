@@ -7,7 +7,7 @@ if %skaitlis% GEQ 100 call rekinat
 set /p q=Velaties atkartot programmas darbibu? (y/n)
 if %q%==y (goto sakums)
 
-echo Praktisko darbu izpildija %vards% %uzvards%. >>> rezultats.txt
-chmod -h rezultats.txt
+echo Praktisko darbu izpildija %vards% %uzvards%. >> rezultats.txt
+attrib -h rezultats.txt
 if exist %vards%_%uzvards%.txt (del %vards%_%uzvards%.txt)
 ren rezultats.txt %vards%_%uzvards%.txt

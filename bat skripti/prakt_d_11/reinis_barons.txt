@@ -1,5 +1,5 @@
-Ciparu summa=
-Ciparu reizinajums=
+Ciparu summa=6
+Ciparu reizinajums=6
 Displays or changes file attributes.
 
 ATTRIB [+R | -R] [+A | -A] [+S | -S] [+H | -H] [+O | -O] [+I | -I] [+X | -X] [+P | -P] [+U | -U]
@@ -26,3 +26,4 @@ ATTRIB [+R | -R] [+A | -A] [+S | -S] [+H | -H] [+O | -O] [+I | -I] [+X | -X] [+P
   /L  Work on the attributes of the Symbolic Link versus
       the target of the Symbolic Link
 
+Praktisko darbu izpildija reinis barons. 
