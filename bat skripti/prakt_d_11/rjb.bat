@@ -1,9 +1,20 @@
-@echo on
+@echo off
 :sakums
+set /a skaitlis1=0
+set /a skaitlis2=0
+set /a skaitlis3=0
+set /a skaitlis=0
+
 set /p vards=Ievadiet vardu: 
 set /p uzvards=Ievadiet uzvardu: 
 set /p skaitlis=Ievadiet trisciparu skaitli: 
-if %skaitlis% GEQ 100 call rekinat
+if %skaitlis% GEQ 100 call rekinat %skaitlis%
+
+set skaitlis1=
+set skaitlis2=
+set skaitlis3=
+set skaitlis=
+
 set /p q=Velaties atkartot programmas darbibu? (y/n)
 if %q%==y (goto sakums)
 
