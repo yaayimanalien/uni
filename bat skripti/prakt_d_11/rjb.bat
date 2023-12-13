@@ -1,4 +1,4 @@
-@echo off
+@echo on
 :sakums
 set /p vards=Ievadiet vardu: 
 set /p uzvards=Ievadiet uzvardu: 
