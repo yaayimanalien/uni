@@ -50,5 +50,3 @@ namespace Eksamens_3_uzd
         }
     }
 }
-
-    //arr[i, j] = arr[i + 1, j] + arr[i + 1, j - 1];
