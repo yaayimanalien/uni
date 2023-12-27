@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eksamens_IT23097_Reinis_Janis_Barons_1_uzd
+namespace Eksamens_1_uzd
 {
     internal class Program
     {
