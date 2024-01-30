@@ -37,7 +37,7 @@ namespace _1._2
 
                     if (wrongGuess)
                     {
-                        Console.WriteLine("wrong!");
+                        Console.WriteLine("Tāda burta vārdā nav!");
                     }
                 }
 
