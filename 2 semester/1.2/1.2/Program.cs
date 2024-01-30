@@ -12,6 +12,7 @@ namespace _1._2
             string word = "algoritms";
             bool loopStop = false;
             int tries = 0;
+            string letter = "";
 
             bool[] guessedLetters = new bool[word.Length];
 
@@ -19,14 +20,12 @@ namespace _1._2
             {
                 guessedLetters[i] = false;
             }
-            
             while (loopStop == false)
             {
                 tries++;
                 int correctLetters = 0;
                 string displayWord = "";
-                Console.Write("\n Ievadi burtu: ");
-                string letter = Console.ReadLine();
+                
                 
                 for (int i = 0; i < word.Length; i++)
                 {
@@ -59,6 +58,9 @@ namespace _1._2
                     Console.WriteLine($"Vārds uzminēts pareizi ar mēģinājumu skaitu {tries}");
                     loopStop = true;
                 }
+
+                Console.Write("\nIevadi burtu: ");
+                letter = Console.ReadLine();
             }
         }
     }
