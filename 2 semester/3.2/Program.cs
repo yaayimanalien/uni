@@ -21,7 +21,7 @@ namespace _3._2
             Console.WriteLine($"Skaitlis masīvā atkārtojas {Meklet(arr1, int.Parse(Console.ReadLine()))} reizes");
         }
         
-        private static int[,] InitMas(int[,] input)
+        private static void InitMas(int[,] input)
         {
             Random random = new Random();
             for (int i = 0; i < input.GetLength(0); i++)
@@ -31,7 +31,7 @@ namespace _3._2
                     input[i, j] = random.Next(1, 9);
                 }
             }
-            return input;
+            //return input;
         }
 
         private static void PrintMas(int[,] input)

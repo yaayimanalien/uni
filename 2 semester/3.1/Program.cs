@@ -17,7 +17,11 @@ namespace _3._1
             for (int i = 0; i < arr1.Length; i++)
             {
                 arr1[i] = random.Next(1, 9);
-                Console.Write($"{arr1[i]}\t");
+            }
+
+            foreach (double num in arr1)
+            {
+                Console.Write($"{num}\t");
             }
 
             Console.Write("\n");
@@ -25,8 +29,13 @@ namespace _3._1
             for (int i = 0; i < arr2.Length; i++)
             {
                 arr2[i] = random.Next(1, 9);
-                Console.Write($"{arr2[i]}\t");
             }
+            
+            foreach (double num in arr2)
+            {
+                Console.Write($"{num}\t");
+            }
+            
             Console.Write("\n");
             
             bool stop = false;
@@ -70,9 +79,10 @@ namespace _3._1
             {
                 arr3[i] = double1[i] + double2[i];
             }
-            for (int i = 0; i < double1.Length; i++)
+            
+            foreach (int num in arr3)
             {
-                Console.Write($"{arr3[i]} ");
+                Console.Write($"{num} ");
             }
             Console.Write("\n");
         }
@@ -85,8 +95,13 @@ namespace _3._1
             for (int i = 0; i < double1.Length; i++)
             {
                 arr3[i] = double1[i] - double2[i];
-                Console.Write($"{arr3[i]} ");
             }
+            
+            foreach (int num in arr3)
+            {
+                Console.Write($"{num} ");
+            }
+            
             Console.Write("\n");
         }
         
@@ -98,8 +113,14 @@ namespace _3._1
             for (int i = 0; i < double1.Length; i++)
             {
                 arr3[i] = double1[i] * double2[i];
-                Console.Write($"{arr3[i]} ");
+                
             }
+            
+            foreach (int num in arr3)
+            {
+                Console.Write($"{num} ");
+            }
+            
             Console.Write("\n");
         }
         
@@ -111,8 +132,13 @@ namespace _3._1
             for (int i = 0; i < double1.Length; i++)
             {
                 arr3[i] = double1[i] / double2[i];
-                Console.Write($"{arr3[i]} ");
             }
+            
+            foreach (double num in arr3)
+            {
+                Console.Write($"{num} ");
+            }
+            
             Console.Write("\n");
         }
 
@@ -138,9 +164,9 @@ namespace _3._1
             }
             if (aritm2 > aritm1)
             {
-                Console.WriteLine($"1. masīva vid vērtība ir lielāka par 2. masīva vid vērtību par {aritm1-aritm2}");
+                Console.WriteLine($"2. masīva vid vērtība ir lielāka par 1. masīva vid vērtību par {aritm2-aritm1}");
             }
-            Console.WriteLine($"Abu masīvu vidējā aritmētiskā vērtība: {(aritm1 + aritm2) / (double1.Length*2)}");
+            // Console.WriteLine($"Abu masīvu vidējā aritmētiskā vērtība: {(aritm1 + aritm2) / (double1.Length*2)}");
         }
     }
 }
