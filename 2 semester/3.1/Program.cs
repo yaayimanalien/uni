@@ -74,11 +74,13 @@ namespace _3._1
         {
             double[] arr3 = new double[10];
             
-            Console.Write("Rezultāts: ");
+            
             for (int i = 0; i < double1.Length; i++)
             {
                 arr3[i] = double1[i] + double2[i];
             }
+            
+            Console.Write("Rezultāts: ");
             
             foreach (int num in arr3)
             {
