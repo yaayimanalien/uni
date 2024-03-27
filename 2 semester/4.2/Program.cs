@@ -15,7 +15,6 @@ namespace _4._2
             int[][] array = InitArray(x, min, max);
             PrintArrayForeach(array);
             PrintArrayFor(array);
-            
         }
 
         static int[][] InitArray(int x, int min, int max)
