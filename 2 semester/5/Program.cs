@@ -103,7 +103,7 @@ namespace _5
 
             public bool PietiekLīdzekļu()
             {
-                return grozs.Kopsumma() < līdzekļi;
+                return grozs.Kopsumma() =< līdzekļi;
             }
 
             public void Izvadīt()
