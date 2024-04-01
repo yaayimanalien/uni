@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Xml;
 
 namespace _7
 {
@@ -29,11 +28,11 @@ namespace _7
             
             public int AprēķinātVecumu()
             {
-                int datums = int.Parse(pers_kods.Substring(0, 2)); // Extracting first two characters for the day
-                int mēnesis = int.Parse(pers_kods.Substring(2, 2)); // Extracting two characters for the month
-                int gads = int.Parse(pers_kods.Substring(4, 2)); // Extracting two characters for the year
-
-                // Assuming the year is in the format YY, and adding 2000 to get the full year
+                int datums = int.Parse(pers_kods.Substring(0, 2)); 
+                int mēnesis = int.Parse(pers_kods.Substring(2, 2)); 
+                int gads = int.Parse(pers_kods.Substring(4, 2)); 
+                
+                // TODO: ja gads > šodiena.Year, tad pilnsGads = 1900 + gads
                 int pilnsGads = 2000 + gads;
 
                 DateTime šodiena = DateTime.Today;
@@ -132,41 +131,148 @@ namespace _7
 
             public void MeklētSkolēnu(string ko_meklēt)
             {
+                bool irAtrasts = false; 
+
                 for (int i = 0; i < skolēni.Length; i++)
                 {
                     if (skolēni[i].vārds == ko_meklēt || skolēni[i].uzvārds == ko_meklēt)
                     {
+                        irAtrasts = true; 
                         skolēni[i].Izvadīt();
                     }
-                    else
-                    {
-                        Console.WriteLine("Šāds skolēns netika atrasts.");
-                    }
+                }
+                
+                if (!irAtrasts)
+                {
+                    Console.WriteLine("Šāds skolēns netika atrasts.");
                 }
             }
+
         }
         
     internal class Program
     {
-        public static void Main(string[] args)
-        {
-            Klase klase = new Klase();
-            klase.Reģistrēt();
-            klase.Izvadīt();
-        }
+        // public static void Main(string[] args)
+        // {
+        //     Klase klase = new Klase();
+        //     klase.Reģistrēt();
+        //     klase.Izvadīt();
+        // }
 
-        public Klase meklētKlasei(Klase[] klases, string nosaukums)
+        
+        public static Klase meklētKlasei(Klase[] klases, string nosaukums)
         {
-            int j = 0;
             for (int i = 0; i < klases.Length; i++)
             {
-                if (klases[i].nosaukums == nosaukums)
+                if (klases[i] != null)
                 {
-                    j = i;
+                    if (klases[i].nosaukums == nosaukums)
+                    {
+                        return klases[i];
+                    }
                 }
             }
 
-            return klases[j];
-    }
+            return null;
+        }
+        
+        public static void Main()
+        {
+            Klase[] klases;
+            Console.Write("Ievadu klašu skaitu: ");
+            int skaits = int.Parse(Console.ReadLine());
+            klases = new Klase[skaits];
+            
+            bool loopStop = false;
+            while (!loopStop)
+            {
+                Console.Clear();
+                Console.WriteLine("1 - Izveidot jaunu klasi");
+                Console.WriteLine("2 - Izvadīt informāciju par klasēm");
+                Console.WriteLine("3 - Atrast klasi");
+                Console.WriteLine("4 - Atrast skolēnu");
+                Console.WriteLine("5 - Atrast klasē vecāko skolēnu");
+                Console.WriteLine("0 - Iziet");
+                Console.Write("\nIzvēlies darbību: ");
+                string darbība = Console.ReadLine();
+            
+                switch(darbība)
+                {
+                    case "0":
+                        loopStop = true;
+                        break;
+                    
+                    case "1":
+                        
+                        for (int i = 0; i < klases.Length; i++)
+                        {
+                            if (klases[i] == null)
+                            {
+                                klases[i] = new Klase();
+                                klases[i].Reģistrēt();
+                                break;
+                            }
+                        }
+                        break;
+                    
+                    case "2":
+                        for (int i = 0; i < klases.Length; i++)
+                        {
+                            if (klases[i] != null)
+                            {
+                                klases[i].Izvadīt();
+                            }
+                        }
+                        Console.ReadKey();
+                        break;
+                    
+                    case "3":
+                        Console.Write("Ieraksi klases nosaukumu: ");
+                        string nosaukums = Console.ReadLine();
+
+                        Klase atrastāKlase = meklētKlasei(klases, nosaukums);
+                        if (atrastāKlase != null)
+                        {
+                            atrastāKlase.Izvadīt();
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Klase netika atrasta.");
+                            Console.ReadKey();
+                        }
+                        break;
+                    
+                    case "4":
+                        Console.WriteLine("Ievadiet skolēna vārdu vai uzvārdu: ");
+                        string koMeklēt = Console.ReadLine();
+                        for (int i = 0; i < klases.Length; i++)
+                        {
+                            if (klases[i] != null)
+                            {
+                                klases[i].MeklētSkolēnu(koMeklēt);
+                            }
+                        }
+
+                        Console.ReadKey();
+                        break;
+                    
+                    case "5":
+                        for (int i = 0; i < klases.Length; i++)
+                        {
+                            if (klases[i] != null)
+                            {
+                                klases[i].VecākaisSkolēns().Izvadīt();
+                                Console.WriteLine($"Šis skolēns atrodas {klases[i].nosaukums} klasē.");
+                            }
+                        }
+
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+
+        
     }
 }
