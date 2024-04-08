@@ -4,42 +4,59 @@ namespace _7
 {
     public class Skolēns
         {
+            // Skolēna parametri
             public string vārds;
             public string uzvārds;
             public string pers_kods;
 
             public void Reģistrēt()
             {
-                Console.Write("Vārds: ");
+                // Reģistrē skolēna vērtības
+                
+                Console.Write("Skolēna vārds: ");
                 vārds = Console.ReadLine();
-                Console.Write("Uzvārds: ");
+                Console.Write("Skolēna uzvārds: ");
                 uzvārds = Console.ReadLine();
-                Console.Write("Personas kods: ");
+                Console.Write("Skolēna personas kods: ");
                 pers_kods = Console.ReadLine();
             }
 
             public void Izvadīt()
             {
-                Console.WriteLine($"Vārds: {vārds}");
-                Console.WriteLine($"Uzvārds: {uzvārds}");
-                Console.WriteLine($"Personas kods: {pers_kods}");
-                Console.WriteLine($"Vecums: {AprēķinātVecumu()}");
+                // Izvada skolēna vērtības
+                
+                Console.WriteLine($"Skolēna vārds: {vārds}");
+                Console.WriteLine($"Skolēna uzvārds: {uzvārds}");
+                Console.WriteLine($"Skolēna personas kods: {pers_kods}");
+                Console.WriteLine($"Skolēna vecums: {AprēķinātVecumu()}");
             }
             
             public int AprēķinātVecumu()
             {
+                // Sadala personas koda pirmo daļu
+                
                 int datums = int.Parse(pers_kods.Substring(0, 2)); 
                 int mēnesis = int.Parse(pers_kods.Substring(2, 2)); 
                 int gads = int.Parse(pers_kods.Substring(4, 2)); 
-                
-                // TODO: ja gads > šodiena.Year, tad pilnsGads = 1900 + gads
-                int pilnsGads = 2000 + gads;
 
+                
+                // Izveido pašreizējā laika objektu
                 DateTime šodiena = DateTime.Today;
 
+                int pilnsGads;
+                
+                if (gads > šodiena.Year)
+                {
+                    pilnsGads = 1900 + gads;
+                }
+                else
+                {
+                    pilnsGads = 2000 + gads;
+                }
+                
                 int vecums = šodiena.Year - pilnsGads;
 
-                // Adjusting age based on birth month and day
+                
                 if (šodiena.Month < mēnesis || (šodiena.Month == mēnesis && šodiena.Day < datums))
                 {
                     vecums--;
@@ -52,35 +69,45 @@ namespace _7
 
         public class Skolotājs
         {
+            // skolotāja parametri
+            
             public string vārds;
             public string uzvārds;
             public double alga;
 
             public void Reģistrēt()
             {
-                Console.Write("Vārds: ");
+                // reģistrē skolotāja parametrus
+                
+                Console.Write("Skolotāja vārds: ");
                 vārds = Console.ReadLine();
-                Console.Write("Uzvārds: ");
+                Console.Write("Skolotāja uzvārds: ");
                 uzvārds = Console.ReadLine();
-                Console.Write("Alga: ");
+                Console.Write("Skolotāja alga: ");
                 alga = int.Parse(Console.ReadLine());
             }
 
             public void Izvadīt()
             {
-                Console.WriteLine($"Vārds: {vārds}");
-                Console.WriteLine($"Uzvārds: {uzvārds}");
-                Console.WriteLine($"Alga: {AlgaPēcNodokļiem()}");
+                // izvada parametrus
+                
+                Console.WriteLine($"Skolotāja vārds: {vārds}");
+                Console.WriteLine($"Skolotāja uzvārds: {uzvārds}");
+                Console.WriteLine($"Skolotāja alga: {AlgaPēcNodokļiem()}");
             }
 
             public double AlgaPēcNodokļiem()
             {
+                // pareizina algu ar nodokļu likmēm
+                
                 return alga * (1 - 0.2 - 0.15);
             }
         }
 
         public class Klase
         {
+            // klases parametri
+            
             public string nosaukums;
             public int skolēnuSkaits;
             public Skolēns[] skolēni;
@@ -88,6 +115,8 @@ namespace _7
 
             public void Reģistrēt()
             {
+                // reģistrē parametrus
+                
                 Console.Write("Nosaukums: ");
                 nosaukums = Console.ReadLine();
                 Console.Write("Skolēnu skaits: ");
@@ -106,6 +135,8 @@ namespace _7
 
             public void Izvadīt()
             {
+                // izvada parametrus
+                
                 Console.WriteLine($"Nosaukums: {nosaukums}");
                 Console.WriteLine($"Skolēnu skaits: {skolēnuSkaits}");
                 foreach (var skolēns in skolēni)
@@ -117,6 +148,8 @@ namespace _7
 
             public Skolēns VecākaisSkolēns()
             {
+                // iziec cauri klases skolēniem un noskaidro vecāko
+                
                 int j = 0;
                 for (int i = 0; i < skolēni.Length; i++)
                 {
@@ -131,6 +164,8 @@ namespace _7
 
             public void MeklētSkolēnu(string ko_meklēt)
             {
+                // iziet cauri skolēniem klasē un atrod skolēnu
+                
                 bool irAtrasts = false; 
 
                 for (int i = 0; i < skolēni.Length; i++)
@@ -162,6 +197,7 @@ namespace _7
         
         public static Klase meklētKlasei(Klase[] klases, string nosaukums)
         {
+            // iziec cauri klasēm un atrod klasi
             for (int i = 0; i < klases.Length; i++)
             {
                 if (klases[i] != null)
@@ -178,7 +214,7 @@ namespace _7
         
         public static void Main()
         {
-            Klase[] klases;
+            Klase[] klases;                             // izveido klašu masīvu
             Console.Write("Ievadu klašu skaitu: ");
             int skaits = int.Parse(Console.ReadLine());
             klases = new Klase[skaits];
