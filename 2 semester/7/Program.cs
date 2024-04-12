@@ -55,7 +55,6 @@ namespace _7
                 }
                 
                 int vecums = šodiena.Year - pilnsGads;
-
                 
                 if (šodiena.Month < mēnesis || (šodiena.Month == mēnesis && šodiena.Day < datums))
                 {
