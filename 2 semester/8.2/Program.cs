@@ -67,7 +67,7 @@ namespace _9._2
                 // }
                 if (true)
                 {
-                    where 
+                    
                 }
             }
         }
