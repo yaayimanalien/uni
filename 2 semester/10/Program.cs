@@ -52,8 +52,8 @@ namespace _10
             calc.Kapinat(ref x);
             Console.WriteLine($"Kapinājums: {x}");
             
-            //calc.Reizinasa(ref x, ref y);
-            //Console.WriteLine($"Reizinājums: {x}");
+            calc.Reizinasa(ref x, ref y);
+            Console.WriteLine($"Reizinājums: {x}");
         }
     }
 }
