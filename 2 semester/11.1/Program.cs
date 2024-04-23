@@ -53,9 +53,9 @@
         public static void Main(string[] args)
         {
             Darbinieks darbinieks = new Darbinieks();
-            darbinieks.Uzvards = "Sirmais";
-            Console.WriteLine(darbinieks.Uzvards);
-
+            darbinieks.Vards = "Reinis";
+            Console.WriteLine($"darbinieks.Vards = {darbinieks.Vards}, varda garums = {darbinieks.Vards.Lenght}");
+            
         }
     }
 };

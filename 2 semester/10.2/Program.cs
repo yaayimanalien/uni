@@ -35,9 +35,9 @@ namespace _10._2
     {
         public static void Main(string[] args)
         {
-            double[] s = {5, 6, 7, 8};
-            Console.WriteLine(MansMath.Min(s));
-            Console.WriteLine(MansMath.Max(s));
+            // double[] s = {5, 6, 7, 8};
+            Console.WriteLine(MansMath.Min(5, 6, 7, 8));
+            Console.WriteLine(MansMath.Max(5, 6, 7, 8));
         }
     }
 }
