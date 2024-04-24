@@ -1,4 +1,6 @@
-﻿class Pirmais
+﻿using System;
+
+class Pirmais
 {
     public Pirmais()
     {

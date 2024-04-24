@@ -1,4 +1,8 @@
-﻿namespace _11._1
+﻿using System;
+using System.Data;
+using System.Runtime.InteropServices;
+
+namespace _11._1
 {
     public class Darbinieks
     {
@@ -12,7 +16,7 @@
             get { return vards; }
             set
             {
-                if (value.Length >= 20)
+                if (value.Length <= 20)
                 {
                     vards = value;
                 }
@@ -52,9 +56,30 @@
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("=== PARASTS DARBINIEKS ===");
             Darbinieks darbinieks = new Darbinieks();
             darbinieks.Vards = "Reinis";
-            Console.WriteLine($"darbinieks.Vards = {darbinieks.Vards}, varda garums = {darbinieks.Vards.Lenght}");
+            Console.WriteLine($"darbinieks.Vards = {darbinieks.Vards}, varda garums = {darbinieks.Vards.Length}");
+            darbinieks.Uzvards = "Barons";
+            
+            // piemers bez varda
+            Console.WriteLine("=== DARBINIEKS BEZ VARDA ===");
+            Darbinieks darbinieksBezVarda = new Darbinieks();
+            darbinieksBezVarda.Uzvards = "Sirmais";
+            
+            if (darbinieksBezVarda.Vards == null)
+            {
+                Console.WriteLine($"Darbiniekam ir vārds: {darbinieksBezVarda.Vards != null}, darbiniekam uzvārds tika iestadīts: {darbinieksBezVarda.Uzvards != null}");
+            }
+
+            Console.WriteLine("=== DARBINIEKS AR GARU VARDU ===");
+            Darbinieks arGaruVardu = new Darbinieks();
+            arGaruVardu.Vards = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Console.WriteLine($"Darbinieka varda garums: {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa".Length}");
+            Console.WriteLine($"Vai vardu izdevas ievietot: {arGaruVardu.Vards != null}");
+            
+            // TODO: dzimsanas gadu nevar sanemt
+            // TODO: Vecumu nevar piešķirt
             
         }
     }
