@@ -2,21 +2,26 @@
 
 public class myConsole
 {
-    static string tagad; // mainīgajam piešķirt patreizējo datumu. Formātu izvēlēties brīvi
-
-    public static string Tagad
-    {
-        get => tagad;
-        set => tagad = $"{DateTime.Today.Date}.{DateTime.Today.Month}.{DateTime.Today.Year}";
-    }
+    static Random random = new Random();
     
-    static int NolasitKaInt()
+    private static string _tagad = $"{DateTime.Today.Day}.{DateTime.Today.Month}.{DateTime.Today.Year}";
+    
+    public static string tagad
+    {
+        get => _tagad;
+        private set => _tagad = value;
+    }   // mainīgajam piešķirt patreizējo datumu. Formātu izvēlēties brīvi
+    
+    
+    public static int NolasitKaInt()
     {
         // funkcija pieprasa lietotājam ievadīt veselo skaitli. Gadījumā, ja
         // lietotājs ievada veselo skaitli, atgriež to. Ja lietotājs ievadīja ne veselo
         // skaitli (burtus, simbolus) atgriež nulli un paziņo, ka konvertācija bija
         // neveiksmīga.
+
         int skaitlis;
+        Console.Write("Ievadiet skaitli: ");
         if(int.TryParse(Console.ReadLine(), out skaitlis))
         {
             return skaitlis;
@@ -28,13 +33,13 @@ public class myConsole
         }
     }
     
-    static void Izvadit(string text)
+    public static void Izvadit(string text)
     {
         //funkcija izvada tekstu text
         Console.WriteLine(text);
     }
     
-    static void NomainitFonaKrasu()
+    public static void NomainitFonaKrasu()
     {
         //funkcija nomaina konsoles fona krāsu uz gadījuma (!) krāsu
         
@@ -44,28 +49,29 @@ public class myConsole
         // Console.BackgroundColor = randomBackground;
         
         //Console.BackgroundColor = ConsoleColor.DarkRed;
-
-        Random random = new Random();
+        
         Console.BackgroundColor = (ConsoleColor)random.Next(0,16);
     }
     
     public static void NomainitBurtuKrasu()
     {
         //funkcija nomaina konsoles burtu krāsu uz gadījuma (!) krāsu
+        
         // Console.ForegroundColor = ConsoleColor.Red;
         
-        Random random = new Random();
         // ConsoleColor[] colors = (ConsoleColor[])Enum.GetValues(typeof(ConsoleColor));
         // ConsoleColor randomForeground = colors[random.Next(colors.Length)];
         // Console.ForegroundColor = randomForeground;
+        
         Console.ForegroundColor = (ConsoleColor)random.Next(0,16);
     }
     
-    static void FormatetVardu(string vards_uzvārds)
+    public static void FormatetVardu(string vards_uzvārds)
     {
         //funkcija saņem vārdu un uzvārdu kā vienu string, piemēram, "Ivars
         // Zars". Un izvada to sekojošā formātā - vārda pirmais burts. Uzvārds (piemēram,
         // "I. Zars")
+        
         string vards = "";
         string uzvards = "";
         bool saciesUzvards = false;
@@ -91,21 +97,21 @@ public class myConsole
         Console.WriteLine($"{vards[0]}. {uzvards}");
     }
 
-    internal static string IzveidotParoli(int garums)
+    public static string IzveidotParoli(int garums)
     {
         // funkcija veido un atgriež lietotājam drošo paroli. Paroles garumu
         // funkcija saņem. PAroles veidošanas principus jāizdomā pašam.
+        
         Random random = new Random();
         string paswrd = "";
         for (int i = 0; i < garums; i++)
         {
-            paswrd += (char)random.Next(40, 50);
-            // TODO: nomaini ascii values uz kko normalu
+            paswrd += (char)random.Next(33, 126);
         }
         return paswrd;
     }
     
-    static string SifretTekstu(ref string teksts)
+    public static string SifretTekstu(ref string teksts)
     {
         string encrypted = "";
         for (int i = teksts.Length - 1; i >= 0; i--) 
@@ -115,7 +121,7 @@ public class myConsole
         return encrypted;
     }
 
-    static string AtsifretTekstu(ref string teksts)
+    public static string AtsifretTekstu(ref string teksts)
     {
         string decrypted = "";
         for (int i = teksts.Length - 1; i >= 0; i--) 
@@ -130,15 +136,40 @@ internal class Program
 {
     public static void Main()
     {
-        // Console.WriteLine(myConsole.IzveidotParoli(8));
-        // Console.Write("Enter password to be encrypted: ");
-        // string password = Console.ReadLine();
-        // myConsole.NomainitBurtuKrasu();
-        // string encryptedPass = myConsole.SifretTekstu(ref password);
-        // Console.WriteLine($"Encrypted password: {encryptedPass}");
-        // string decryptedPass = myConsole.AtsifretTekstu(ref encryptedPass);
-        // Console.WriteLine($"Decrypted password: {decryptedPass}");
-        myConsole.NomainitBurtuKrasu();
-        Console.WriteLine("hello");
+        // tagad un izvadīt pielietojums
+        string tagad = myConsole.tagad;
+        myConsole.Izvadit($"Šodien ir {tagad}");
+        
+        // FormatetVardu pielietojums
+        string vards = "Ivars Zars";
+        Console.WriteLine($"Pirms formātēšanas: {vards}");
+        Console.Write("Pēc formātēšanas: ");
+        myConsole.FormatetVardu(vards);
+        
+        // NolasitKaInt pielietojums
+        int skaitlis = myConsole.NolasitKaInt();
+        if (skaitlis != 0)
+        {
+            Console.WriteLine($"Ievadītais skaitlis: {skaitlis}");
+        }
+        
+        // Paroles ģenerēšana
+        Console.WriteLine($"Ģenerētā parole: {myConsole.IzveidotParoli(8)}");
+        
+        // Teksta šifrešana
+        string teksts = "Secret";
+        Console.WriteLine($"Teksts pirms šifrēšanas: {teksts}");
+        string encrypted = myConsole.SifretTekstu(ref teksts);
+        Console.WriteLine($"Teksts pēc šifrēšanas: {encrypted}");
+        string decrypted = myConsole.AtsifretTekstu(ref encrypted);
+        Console.WriteLine($"Teksts pēc atšifrēšanas: {decrypted}");
+        
+        // Konsoles krāsu nomaiņa
+        for (int i = 0; i < 5; i++)
+        {
+            myConsole.NomainitBurtuKrasu();
+            myConsole.NomainitFonaKrasu();
+            Console.WriteLine("Mainītas krāsas");
+        }
     }
 }

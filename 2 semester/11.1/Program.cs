@@ -82,11 +82,8 @@ namespace _11._1
 
             //arGaruVardu.Vecums = 20; // nevar pievienot vērtību vecums
             arGaruVardu.DzimsanasGads = 2004;
-            // Console.WriteLine(arGaruVardu.DzimsanasGads);
-            
-            // Vecumu nevar piešķirt
-            // arGaruVardu.Vecums = 20;
-
+            //Console.WriteLine(arGaruVardu.DzimsanasGads);
+            Console.WriteLine(arGaruVardu.Vecums);
         }
     }
 };

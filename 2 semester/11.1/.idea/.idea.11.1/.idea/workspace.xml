@@ -12,14 +12,6 @@
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.2/.idea/.idea.11.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.2/.idea/.idea.11.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12/.idea/.idea.12/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../12/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../9/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../9/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/App.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/ConsoleApp1.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/ConsoleApp1.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/Properties/AssemblyInfo.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/a50a11d9c8624473a24144d537603e721a00/bf/68598250/02000003pdb1High.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/a50a11d9c8624473a24144d537603e721a00/bf/68598250/02000003pdb1Low.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -105,15 +98,39 @@
       <workItem from="1713940471117" duration="207000" />
       <workItem from="1714239137029" duration="539000" />
       <workItem from="1714310715940" duration="16000" />
-      <workItem from="1714463039091" duration="358000" />
+      <workItem from="1714463039091" duration="2449000" />
+      <workItem from="1714484311807" duration="631000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1714463470037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714463470037</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

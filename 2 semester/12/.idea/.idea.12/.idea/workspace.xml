@@ -14,12 +14,6 @@
       <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.12/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../9/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../9/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/App.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/ConsoleApp1.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/ConsoleApp1.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ConsoleApp1/Properties/AssemblyInfo.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +100,7 @@
       <workItem from="1714418794562" duration="474000" />
       <workItem from="1714458390397" duration="565000" />
       <workItem from="1714462868986" duration="167000" />
+      <workItem from="1714496642895" duration="2406000" />
     </task>
     <task id="LOCAL-00001" summary="small little fixes">
       <option name="closed" value="true" />
