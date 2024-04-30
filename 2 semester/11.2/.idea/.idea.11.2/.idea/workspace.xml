@@ -5,44 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf8cebbd-7b7c-41e2-b086-12b2173e1399" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../11.1/.idea/.idea.11.1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1/11.1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../11.1/11.1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1/11.1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../11.1/11.1.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../11.1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/.idea/.idea.11.1_fix/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/.idea/.idea.11.1_fix/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/.idea/.idea.11.1_fix/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/.idea/.idea.11.1_fix/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/.idea/.idea.11.1_fix/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/11.1_fix.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/11.1_fix.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1_fix/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.11.2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.11.2/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.11.2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/11.2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/11.2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11.2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/11.2.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/11.3.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/11.3.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12.dir/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/12.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../12/12.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/12.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../12/12.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../12/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../12/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12fix/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../12fix/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12/.idea/.idea.12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12/.idea/.idea.12/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,43 +16,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yaayimanalien"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yaayimanalien&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/yaayimanalien/repos.git",
-    "accountId": "5378f9f3-48ff-42b0-9a21-facfab49bce9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yaayimanalien/repos.git&quot;,
+    &quot;accountId&quot;: &quot;5378f9f3-48ff-42b0-9a21-facfab49bce9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2fXHtIAjIKeKSeGxOVQrImLQ7B0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.11.2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.11.2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\winter\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\winter\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\winter\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\winter\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\winter\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\winter\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="11.2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -118,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713940716083</updated>
       <workItem from="1713940717157" duration="24000" />
+      <workItem from="1714239128516" duration="7000" />
     </task>
     <servers />
   </component>

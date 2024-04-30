@@ -75,7 +75,7 @@ namespace _9
                     case "1":
                         for (int i = 0; i < darbinieki.Length; i++)
                         {
-                            Console.WriteLine($"Ludzu ievadiet {i} darbinieka datus:");
+                            Console.WriteLine($"Ludzu ievadiet {i+1} darbinieka datus:");
                             darbinieki[i].Registret();
                         }
                         break;

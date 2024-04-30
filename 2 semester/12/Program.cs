@@ -37,13 +37,28 @@ public class myConsole
     static void NomainitFonaKrasu()
     {
         //funkcija nomaina konsoles fona krāsu uz gadījuma (!) krāsu
-        Console.BackgroundColor = ConsoleColor.DarkRed;
+        
+        // Random random = new Random();
+        // ConsoleColor[] colors = (ConsoleColor[])Enum.GetValues(typeof(ConsoleColor));
+        // ConsoleColor randomBackground = colors[random.Next(colors.Length)];
+        // Console.BackgroundColor = randomBackground;
+        
+        //Console.BackgroundColor = ConsoleColor.DarkRed;
+
+        Random random = new Random();
+        Console.BackgroundColor = (ConsoleColor)random.Next(0,16);
     }
     
-    static void NomainitBurtuKrasu()
+    public static void NomainitBurtuKrasu()
     {
         //funkcija nomaina konsoles burtu krāsu uz gadījuma (!) krāsu
-        Console.ForegroundColor = ConsoleColor.Red;
+        // Console.ForegroundColor = ConsoleColor.Red;
+        
+        Random random = new Random();
+        // ConsoleColor[] colors = (ConsoleColor[])Enum.GetValues(typeof(ConsoleColor));
+        // ConsoleColor randomForeground = colors[random.Next(colors.Length)];
+        // Console.ForegroundColor = randomForeground;
+        Console.ForegroundColor = (ConsoleColor)random.Next(0,16);
     }
     
     static void FormatetVardu(string vards_uzvārds)
@@ -123,5 +138,7 @@ internal class Program
         // Console.WriteLine($"Encrypted password: {encryptedPass}");
         // string decryptedPass = myConsole.AtsifretTekstu(ref encryptedPass);
         // Console.WriteLine($"Decrypted password: {decryptedPass}");
+        myConsole.NomainitBurtuKrasu();
+        Console.WriteLine("hello");
     }
 }

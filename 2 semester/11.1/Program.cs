@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Runtime.InteropServices;
 
 namespace _11._1
 {
@@ -28,7 +26,7 @@ namespace _11._1
             get { return uzvards; }
             set
             {
-                if (vards != string.Empty)
+                if (!string.IsNullOrEmpty(vards))
                 {
                     uzvards = value;
                 }
@@ -65,7 +63,7 @@ namespace _11._1
             // piemers bez varda
             Console.WriteLine("=== DARBINIEKS BEZ VARDA ===");
             Darbinieks darbinieksBezVarda = new Darbinieks();
-            darbinieksBezVarda.Uzvards = "Sirmais";
+            darbinieksBezVarda.Uzvards = "Barons";
             
             if (darbinieksBezVarda.Vards == null)
             {
@@ -77,10 +75,18 @@ namespace _11._1
             arGaruVardu.Vards = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Console.WriteLine($"Darbinieka varda garums: {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa".Length}");
             Console.WriteLine($"Vai vardu izdevas ievietot: {arGaruVardu.Vards != null}");
+
+          
             
-            // TODO: dzimsanas gadu nevar sanemt
-            // TODO: Vecumu nevar piešķirt
+            // dzimsanas gadu nevar sanemt
+
+            //arGaruVardu.Vecums = 20; // nevar pievienot vērtību vecums
+            arGaruVardu.DzimsanasGads = 2004;
+            // Console.WriteLine(arGaruVardu.DzimsanasGads);
             
+            // Vecumu nevar piešķirt
+            // arGaruVardu.Vecums = 20;
+
         }
     }
 };
