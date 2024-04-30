@@ -5,7 +5,7 @@ namespace _13
 {
     class Prece
     {
-        private string Nosaukums;
+        public string Nosaukums;
         public double Iepirksanas_cena;
 
         void Izvadt()
@@ -28,6 +28,10 @@ namespace _13
 
         public void Registret()
         {
+            Console.Write("Nosaukums: ");
+            Nosaukums = Console.ReadLine();
+            Console.Write("Iepirksanas cena: ");
+            Iepirksanas_cena = int.Parse(Console.ReadLine());
             Console.Write("Deriguma termins (YYYY MM DD): ");
             Deriguma_termins = DateTime.Parse(Console.ReadLine());
             Console.Write("Vai prece ir alergiska (true/false): ");
@@ -38,6 +42,8 @@ namespace _13
 
         public void Izvadit()
         {
+            // Console.WriteLine($"Nosaukums: {Nosaukums}");
+            // Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
             Console.WriteLine($"Deriguma termins: {Deriguma_termins}");
             Console.WriteLine($"Prece ir alergiska: {Ir_alergisks}");
             Console.WriteLine($"Mervieniba: {Mervieniba}");
@@ -57,6 +63,10 @@ namespace _13
 
         public void Registret()
         {
+            Console.Write("Nosaukums: ");
+            Nosaukums = Console.ReadLine();
+            Console.Write("Iepirksanas cena: ");
+            Iepirksanas_cena = int.Parse(Console.ReadLine());
             Console.Write("Materials: ");
             Materials = Console.ReadLine();
             Console.Write("Prece ir bistama (true/false): ");
@@ -65,6 +75,8 @@ namespace _13
 
         public void Izvadit()
         {
+            Console.WriteLine($"Nosaukums: {Nosaukums}");
+            Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
             Console.WriteLine($"Materials: {Materials}");
             Console.WriteLine($"Prece ir bistama: {Ir_bistama}");
             Console.WriteLine($"Pardosanas cena: {Pardosanas_cena}");
@@ -91,14 +103,18 @@ namespace _13
             SaimniecibasPreces = new Saimniecibas_Prece[Saimniecibas_precu_skaits];
 
             Console.WriteLine("Partikas preces:");
-            foreach (Partikas_Prece prece in PartikasPreces)
+            for (int i = 0; i < PartikasPreces.Length; i++)
             {
+                var prece = PartikasPreces[i];
+                prece = new Partikas_Prece();
                 prece.Registret();
             }
 
             Console.WriteLine("Saimniecibas preces:");
-            foreach (Saimniecibas_Prece prece in SaimniecibasPreces)
+            for (int i = 0; i < SaimniecibasPreces.Length; i++)
             {
+                var prece = SaimniecibasPreces[i];
+                prece = new Saimniecibas_Prece();
                 prece.Registret();
             }
         }
@@ -110,15 +126,27 @@ namespace _13
             Console.WriteLine($"Saimniecibas precu skaits: {Saimniecibas_precu_skaits}");
             
             Console.WriteLine("Partikas preces:");
-            foreach (Partikas_Prece prece in PartikasPreces)
+            if (PartikasPreces != null)
             {
-                prece.Izvadit();
+                foreach (Partikas_Prece prece in PartikasPreces)
+                {
+                    if (prece != null)
+                    {
+                        prece.Izvadit();
+                    }
+                }
             }
 
             Console.WriteLine("Saimniecibas preces:");
-            foreach (Saimniecibas_Prece prece in SaimniecibasPreces)
+            if (SaimniecibasPreces != null)
             {
-                prece.Izvadit();
+                foreach (Saimniecibas_Prece prece in SaimniecibasPreces)
+                {
+                    if (prece != null)
+                    {
+                        prece.Izvadit();
+                    }
+                }
             }
         }
     }

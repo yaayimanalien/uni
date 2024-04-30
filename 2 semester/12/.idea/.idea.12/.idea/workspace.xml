@@ -8,12 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e49aaf78-8b6b-4449-8b24-bd3ee6a4d6db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../11.1/.idea/.idea.11.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.1/.idea/.idea.11.1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../11.1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.2/.idea/.idea.11.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.2/.idea/.idea.11.2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.3/.idea/.idea.11.3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.12/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://G:/Other computers/My Laptop (3)/STUDY/1. semesteris/PROGRAMMING/repos/2 semester/11.1/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../11.1/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../11.1/Properties/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -100,7 +97,7 @@
       <workItem from="1714418794562" duration="474000" />
       <workItem from="1714458390397" duration="565000" />
       <workItem from="1714462868986" duration="167000" />
-      <workItem from="1714496642895" duration="2406000" />
+      <workItem from="1714496642895" duration="3143000" />
     </task>
     <task id="LOCAL-00001" summary="small little fixes">
       <option name="closed" value="true" />
@@ -110,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713940968893</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1714499419746</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714499419746</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="small little fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small little fixes" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
