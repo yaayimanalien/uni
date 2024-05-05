@@ -171,5 +171,7 @@ internal class Program
             myConsole.NomainitFonaKrasu();
             Console.WriteLine("Mainītas krāsas");
         }
+        
+        // static funkcijām nav nepieciešams izveidot objektu/instanci
     }
 }

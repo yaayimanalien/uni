@@ -8,7 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e49aaf78-8b6b-4449-8b24-bd3ee6a4d6db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.12/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../13/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +99,7 @@
       <workItem from="1714458390397" duration="565000" />
       <workItem from="1714462868986" duration="167000" />
       <workItem from="1714496642895" duration="3143000" />
+      <workItem from="1714544575734" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="small little fixes">
       <option name="closed" value="true" />

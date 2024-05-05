@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Authentication.ExtendedProtection;
 
 namespace _13
 {
@@ -8,7 +7,7 @@ namespace _13
         public string Nosaukums;
         public double Iepirksanas_cena;
 
-        void Izvadt()
+        public void Izvadt()
         {
             Console.WriteLine($"Nosaukums: {Nosaukums}");
             Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
@@ -44,6 +43,7 @@ namespace _13
         {
             // Console.WriteLine($"Nosaukums: {Nosaukums}");
             // Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
+            Izvadt();
             Console.WriteLine($"Deriguma termins: {Deriguma_termins}");
             Console.WriteLine($"Prece ir alergiska: {Ir_alergisks}");
             Console.WriteLine($"Mervieniba: {Mervieniba}");
@@ -105,17 +105,15 @@ namespace _13
             Console.WriteLine("Partikas preces:");
             for (int i = 0; i < PartikasPreces.Length; i++)
             {
-                var prece = PartikasPreces[i];
-                prece = new Partikas_Prece();
-                prece.Registret();
+                PartikasPreces[i] = new Partikas_Prece();
+                PartikasPreces[i].Registret();
             }
 
             Console.WriteLine("Saimniecibas preces:");
             for (int i = 0; i < SaimniecibasPreces.Length; i++)
             {
-                var prece = SaimniecibasPreces[i];
-                prece = new Saimniecibas_Prece();
-                prece.Registret();
+                SaimniecibasPreces[i] = new Saimniecibas_Prece();
+                SaimniecibasPreces[i].Registret();
             }
         }
         
