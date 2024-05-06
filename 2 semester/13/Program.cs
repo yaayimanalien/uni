@@ -4,23 +4,22 @@ namespace _13
 {
     class Prece
     {
-        public string Nosaukums;
-        public double Iepirksanas_cena;
+        public string Nosaukums { get; set; }
+        public double Iepirksanas_cena { get; set; }
 
-        public void Izvadt()
+        public void Izvadit()
         {
             Console.WriteLine($"Nosaukums: {Nosaukums}");
             Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
         }
     }
 
-    class Partikas_Prece : Prece
+    class PartikasPrece : Prece
     {
-        private DateTime Deriguma_termins; // (YYYY, MM, DD)
-        private bool Ir_alergisks;
-        private string Mervieniba;
-
-        private double Pardosanas_cena
+        public DateTime Deriguma_termins { get; set; }
+        public bool Ir_alergisks { get; set; }
+        private string Mervieniba { get; set; }
+        public double Pardosanas_cena
         {
             get { return Iepirksanas_cena * 1.3; }
         }
@@ -39,28 +38,26 @@ namespace _13
             Mervieniba = Console.ReadLine();
         }
 
-        public void Izvadit()
+        public new void Izvadit()
         {
-            // Console.WriteLine($"Nosaukums: {Nosaukums}");
-            // Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
-            Izvadt();
-            Console.WriteLine($"Deriguma termins: {Deriguma_termins}");
-            Console.WriteLine($"Prece ir alergiska: {Ir_alergisks}");
-            Console.WriteLine($"Mervieniba: {Mervieniba}");
-            Console.WriteLine($"Pardosanas cena: {Pardosanas_cena}");
+            // base.Izvadit();
+            // Console.WriteLine($"Deriguma termins: {Deriguma_termins}");
+            // Console.WriteLine($"Prece ir alergiska: {Ir_alergisks}");
+            // Console.WriteLine($"Mervieniba: {Mervieniba}");
+            // Console.WriteLine($"Pardosanas cena: {Pardosanas_cena}");
+            Console.WriteLine($"{Nosaukums}\t\t\t{Iepirksanas_cena}\t\t\t\t{Deriguma_termins}\t\t{Ir_alergisks}\t\t\t\t{Mervieniba}\t\t\t{Pardosanas_cena}");
         }
     }
 
-
     class Saimniecibas_Prece : Prece
     {
-        private string Materials;
-        private bool Ir_bistama;
-        double Pardosanas_cena
+        public string Materials;
+        public bool Ir_bistama;
+        public double Pardosanas_cena
         {
             get { return Iepirksanas_cena * 1.5; }
         }
-
+        
         public void Registret()
         {
             Console.Write("Nosaukums: ");
@@ -72,93 +69,152 @@ namespace _13
             Console.Write("Prece ir bistama (true/false): ");
             Ir_bistama = bool.Parse(Console.ReadLine());
         }
-
-        public void Izvadit()
+        
+        public new void Izvadit()
         {
-            Console.WriteLine($"Nosaukums: {Nosaukums}");
-            Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
-            Console.WriteLine($"Materials: {Materials}");
-            Console.WriteLine($"Prece ir bistama: {Ir_bistama}");
-            Console.WriteLine($"Pardosanas cena: {Pardosanas_cena}");
+            //base.Izvadit();
+            // Console.WriteLine($"Nosaukums: {Nosaukums}");
+            // Console.WriteLine($"Iepirksanas cena: {Iepirksanas_cena}");
+            // Console.WriteLine($"Materials: {Materials}");
+            // Console.WriteLine($"Prece ir bistama: {Ir_bistama}");
+            // Console.WriteLine($"Pardosanas cena: {Pardosanas_cena}");
+            Console.WriteLine($"{Nosaukums}\t\t\t{Iepirksanas_cena}\t\t\t\t{Materials}\t\t\t{Ir_bistama}\t\t\t{Pardosanas_cena}");
         }
     }
 
     class Veikals
     {
-        private string Nosaukums;
-        private int Partikas_precu_skaits;
-        private int Saimniecibas_precu_skaits;
-        private Partikas_Prece[] PartikasPreces;
-        private Saimniecibas_Prece[] SaimniecibasPreces;
+        public string Nosaukums { get; set; }
+        public PartikasPrece[] PartikasPreces { get; set; }
+        public Saimniecibas_Prece[] SaimniecibasPreces { get; set; }
 
         public void Registret()
         {
             Console.Write("Veikala nosaukums: ");
             Nosaukums = Console.ReadLine();
+            
             Console.Write("Partikas precu skaits: ");
+            int Partikas_precu_skaits = 0; 
             Partikas_precu_skaits = int.Parse(Console.ReadLine());
+            PartikasPreces = new PartikasPrece[Partikas_precu_skaits];
+            
             Console.Write("Saimniecibas precu skaits: ");
+            int Saimniecibas_precu_skaits = 0;
             Saimniecibas_precu_skaits = int.Parse(Console.ReadLine());
-            PartikasPreces = new Partikas_Prece[Partikas_precu_skaits];
             SaimniecibasPreces = new Saimniecibas_Prece[Saimniecibas_precu_skaits];
-
-            Console.WriteLine("Partikas preces:");
-            for (int i = 0; i < PartikasPreces.Length; i++)
+            
+            for (int i = 0; i < Partikas_precu_skaits; i++)
             {
-                PartikasPreces[i] = new Partikas_Prece();
+                PartikasPreces[i] = new PartikasPrece();
                 PartikasPreces[i].Registret();
             }
 
-            Console.WriteLine("Saimniecibas preces:");
-            for (int i = 0; i < SaimniecibasPreces.Length; i++)
+            for (int i = 0; i < Saimniecibas_precu_skaits; i++)
             {
                 SaimniecibasPreces[i] = new Saimniecibas_Prece();
                 SaimniecibasPreces[i].Registret();
             }
         }
-        
+
         public void Izvadit()
         {
             Console.WriteLine($"Veikala nosaukums: {Nosaukums}");
-            Console.WriteLine($"Partikas precu skaits: {Partikas_precu_skaits}");
-            Console.WriteLine($"Saimniecibas precu skaits: {Saimniecibas_precu_skaits}");
-            
-            Console.WriteLine("Partikas preces:");
-            if (PartikasPreces != null)
+            Console.WriteLine($"Partikas precu skaits: {PartikasPreces.Length}");
+
+            if (PartikasPreces.Length != 0)
             {
-                foreach (Partikas_Prece prece in PartikasPreces)
+                Console.WriteLine("\n=== PARTIKAS PRECU IZVADISANA ===\n");
+                Console.WriteLine("Nosaukums\t\tIepirksanas cena\t\tDeriguma termins\t\tPrece ir alergiska\t\tMervieniba\t\tPardosanas cena");
+                foreach (var partikasPrece in PartikasPreces)
                 {
-                    if (prece != null)
+                    partikasPrece.Izvadit();
+                }
+            }
+            
+            if (SaimniecibasPreces.Length!=0)
+            {
+                Console.WriteLine("\n=== SAIMNIECIBAS PRECU IZVADISANA ===\n");
+                Console.WriteLine("Nosaukums\t\tIepirksanas cena\t\tMaterials\t\tIr bistama\t\tPardosanas cena");
+                foreach (var saimniecibasPrece in SaimniecibasPreces)
+                {
+                    saimniecibasPrece.Izvadit();
+                }
+            }
+            else
+            {
+                Console.WriteLine();
+            }
+        }
+
+        public void Veikala_Tips()
+        {
+            if (PartikasPreces.Length==0)
+            {
+                Console.WriteLine("\nVeikals ir saimniecibas veikals\n");
+            }
+            else if (SaimniecibasPreces.Length == 0)
+            {
+                Console.WriteLine("\nVeikals ir partikas veikals\n");
+            }
+            else
+            {
+                Console.WriteLine("\nVeikals ir lielveikals\n");
+            }
+        }
+
+        public void Atlasit_arpus_termina()
+        {
+            if (PartikasPreces.Length != 0)
+            {
+                Console.WriteLine("\n=== PRECES ARPUS TERMINA ===\n");
+                Console.WriteLine("Nosaukums\t\tIepirksanas cena\t\tDeriguma termins\t\tPrece ir alergiska\t\tMervieniba\t\tPardosanas cena");
+                for (int i = 0; i < PartikasPreces.Length; i++)
+                {
+                    if (PartikasPreces[i].Deriguma_termins < DateTime.Now)
                     {
-                        prece.Izvadit();
+                        PartikasPreces[i].Izvadit();
                     }
                 }
             }
-
-            Console.WriteLine("Saimniecibas preces:");
-            if (SaimniecibasPreces != null)
+            else
             {
-                foreach (Saimniecibas_Prece prece in SaimniecibasPreces)
+                Console.WriteLine();
+            }
+        }
+
+        public void Atlasit_bistamus()
+        {
+            if (SaimniecibasPreces.Length != 0)
+            {
+                Console.WriteLine("\n=== PRECES KAS IR BISTAMAS ===\n");
+                Console.WriteLine("Nosaukums\t\tIepirksanas cena\t\tMaterials\t\tIr bistama\t\tPardosanas cena");
+                for (int i = 0; i < SaimniecibasPreces.Length; i++)
                 {
-                    if (prece != null)
+                    if (SaimniecibasPreces[i].Ir_bistama)
                     {
-                        prece.Izvadit();
+                        SaimniecibasPreces[i].Izvadit();
                     }
                 }
+            }
+            else
+            {
+                Console.WriteLine();
             }
         }
     }
     
-    internal class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            // Partikas_Prece partikasPrece = new Partikas_Prece();
-            // partikasPrece.Registret();
-
-            Veikals baka = new Veikals();
-            baka.Registret();
-            baka.Izvadit();
+            Veikals veikals = new Veikals();
+            Console.WriteLine("=== VEIKALA REGISTRESANA ===\n");
+            veikals.Registret();
+            Console.WriteLine("\n=== VEIKALA IZVADISANA ===\n");
+            veikals.Izvadit();
+            veikals.Veikala_Tips();
+            veikals.Atlasit_arpus_termina();
+            veikals.Atlasit_bistamus();
         }
     }
 }
