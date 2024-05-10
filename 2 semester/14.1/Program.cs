@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.Policy;
-using System.Xml;
 
 namespace _14._1
 {
@@ -38,19 +34,16 @@ namespace _14._1
     
     internal class Program
     {
-        public Program()
-        {
-        }
-
-        public void FillArray(StudijuKurss[] kurss)
+        public static void FillArray(StudijuKurss[] kurss)
         {
             for (int i = 0; i < kurss.Length; i++)
             {
+                kurss[i] = new StudijuKurss();
                 kurss[i].ReadData();
             }
         }
 
-        public void PrintArray(StudijuKurss[] kurss)
+        public static void PrintArray(StudijuKurss[] kurss)
         {
             for (int i = 0; i < kurss.Length; i++)
             {
@@ -80,58 +73,18 @@ namespace _14._1
             }
         }
 
-        // public static StudijuKurss[] ReadArrayFromFile()
-        // {
-        //     string PATH = @".\file.txt";
-        //     string[] lines = File.ReadAllLines(PATH);
-        //     StudijuKurss[] kurssArray = new StudijuKurss[lines.Length - 1]; // Assuming the header is skipped
-        //
-        //     for (int i = 1; i < lines.Length; i++) // Start from 1 to skip the header
-        //     {
-        //         string[] parts = lines[i].Split(',');
-        //         string nosaukums = parts[0];
-        //         int kreditpunkti = int.Parse(parts[1]);
-        //         bool irObligats = bool.Parse(parts[3]);
-        //
-        //         StudijuKurss kurss = new StudijuKurss();
-        //         kurss.Nosaukums = nosaukums;
-        //         kurss.Kreditpunkti = kreditpunkti;
-        //         kurss.IrObligats = irObligats;
-        //         kurssArray[i - 1] = kurss;
-        //     }
-        //
-        //     return kurssArray;
-        // }
-
         public static StudijuKurss[] ReadArrayFromFile()
         {
             string PATH = @".\file.txt";
             StudijuKurss[] kurss = new StudijuKurss[2];
-            int index = 0;
 
             using (StreamReader reader = new StreamReader(PATH))
             {
                 string line;
 
-                // Skip the header
-                reader.ReadLine();
-
-                // while ((line = reader.ReadLine()) != null)
-                // {
-                //     string[] props = line.Split(',');
-                //
-                //     kurss[index] = new StudijuKurss();
-                //     kurss[index].Nosaukums = props[0];
-                //     kurss[index].Kreditpunkti = int.Parse(props[1]);
-                //     kurss[index].IrObligats = bool.Parse(props[2]);
-                //
-                //     // Console.WriteLine($"Nos: {props[0]}");
-                //     // Console.WriteLine($"Kred: {props[1]}");
-                //     // Console.WriteLine($"IrObl: {props[2]}");
-                //
-                //     index++;
-                // }
-
+                
+                reader.ReadLine();  // izlaižam headeri
+                
                 for (int i = 0; (line = reader.ReadLine()) != null; i++)
                 {
                     string[] props = line.Split(',');
@@ -151,30 +104,14 @@ namespace _14._1
         public static void Main(string[] args)
         {
             StudijuKurss[] kurss = new StudijuKurss[2];
-            for (int i = 0; i < kurss.Length; i++)
-            {
-                kurss[i] = new StudijuKurss();
-                kurss[i].ReadData();
-            }
-
-            //kurss[0].PrintData();
+            Console.WriteLine("===FILLING ARRAY===");
+            FillArray(kurss);
             
             PrintArrayToFile(kurss);
             StudijuKurss[] jaunsKurss = ReadArrayFromFile();
 
-            foreach (StudijuKurss jk in jaunsKurss)
-            {
-                jk.PrintData();
-            }
-
-            // foreach (var h in meow)
-            // {
-            //     Console.WriteLine("START OF CYCLE");
-            //     Console.WriteLine($"nosaukums: {h.Nosaukums}");
-            //     Console.WriteLine($"kred: {h.Kreditpunkti}");
-            //     Console.WriteLine($"ekred: {h.EKreditPunkti}");
-            //     Console.WriteLine($"obl: {h.IrObligats}");
-            // }
+            Console.WriteLine("===PRINTING FROM FILE===");
+            PrintArray(jaunsKurss);
         }
     }
 }
