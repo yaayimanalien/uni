@@ -74,7 +74,7 @@ namespace _14._1
 
                 foreach (StudijuKurss k in kurss)
                 {
-                    string line = $"{k.Nosaukums},{k.Kreditpunkti},{k.EKreditPunkti},{k.IrObligats}";
+                    string line = $"{k.Nosaukums},{k.Kreditpunkti},{k.IrObligats}";
                     writer.WriteLine(line);
                 }
             }
@@ -106,50 +106,46 @@ namespace _14._1
         public static StudijuKurss[] ReadArrayFromFile()
         {
             string PATH = @".\file.txt";
-
             StudijuKurss[] kurss = new StudijuKurss[2];
+            int index = 0;
 
             using (StreamReader reader = new StreamReader(PATH))
             {
                 string line;
+
+                // Skip the header
+                reader.ReadLine();
+
                 // while ((line = reader.ReadLine()) != null)
                 // {
                 //     string[] props = line.Split(',');
-                //     foreach (string prop in props)
-                //     {
-                //         Console.WriteLine(prop);
-                //     }
-                //     // string nosaukums = parts[0];
-                //     // int kreditpunkti = int.Parse(parts[1]);
-                //     // int eKreditPunkti = int.Parse(parts[2]);
-                //     // bool irObligats = bool.Parse(parts[3]);
                 //
-                //     StudijuKurss kurs = new StudijuKurss();
-                //     // todo: add props to kurss i cba rn
-                //     // list.Add(kurs);
-                //     Console.WriteLine("END OF CYCLE");
+                //     kurss[index] = new StudijuKurss();
+                //     kurss[index].Nosaukums = props[0];
+                //     kurss[index].Kreditpunkti = int.Parse(props[1]);
+                //     kurss[index].IrObligats = bool.Parse(props[2]);
+                //
+                //     // Console.WriteLine($"Nos: {props[0]}");
+                //     // Console.WriteLine($"Kred: {props[1]}");
+                //     // Console.WriteLine($"IrObl: {props[2]}");
+                //
+                //     index++;
                 // }
 
-                for (int i = -1; (line = reader.ReadLine()) != null; i++)
+                for (int i = 0; (line = reader.ReadLine()) != null; i++)
                 {
                     string[] props = line.Split(',');
 
-                    if (i!=-1)
-                    {
-                        Console.WriteLine($"CYCLE {i}");
-                        // foreach (string prop in props)
-                        // {
-                        //     Console.WriteLine(prop);
-                        // }
-
-                        kurss[i] = new StudijuKurss();
-                        kurss[i].Nosaukums = props[i];
-                    }
+                    kurss[i] = new StudijuKurss();
+                    kurss[i].Nosaukums = props[0];
+                    kurss[i].Kreditpunkti = int.Parse(props[1]);
+                    kurss[i].IrObligats = bool.Parse(props[2]);
                 }
             }
 
             return kurss;
         }
+
 
         
         public static void Main(string[] args)
@@ -162,18 +158,23 @@ namespace _14._1
             }
 
             //kurss[0].PrintData();
-
-            StudijuKurss[] jaunsKurss = new StudijuKurss[2];
+            
             PrintArrayToFile(kurss);
-            StudijuKurss[] meow = ReadArrayFromFile();
-            foreach (var h in meow)
+            StudijuKurss[] jaunsKurss = ReadArrayFromFile();
+
+            foreach (StudijuKurss jk in jaunsKurss)
             {
-                Console.WriteLine("START OF CYCLE");
-                Console.WriteLine($"nosaukums: {h.Nosaukums}");
-                Console.WriteLine($"kred: {h.Kreditpunkti}");
-                Console.WriteLine($"ekred: {h.EKreditPunkti}");
-                Console.WriteLine($"obl: {h.IrObligats}");
+                jk.PrintData();
             }
+
+            // foreach (var h in meow)
+            // {
+            //     Console.WriteLine("START OF CYCLE");
+            //     Console.WriteLine($"nosaukums: {h.Nosaukums}");
+            //     Console.WriteLine($"kred: {h.Kreditpunkti}");
+            //     Console.WriteLine($"ekred: {h.EKreditPunkti}");
+            //     Console.WriteLine($"obl: {h.IrObligats}");
+            // }
         }
     }
 }
