@@ -36,16 +36,16 @@ namespace f
                 switch (action)
                 {
                     case "add":
-                        result = double.Parse(firstNumber.Text) + double.Parse(secondNumber.Text);
+                        result = Math.Round(double.Parse(firstNumber.Text) + double.Parse(secondNumber.Text));
                         break;
                     case "subtract":
-                        result = double.Parse(firstNumber.Text) - double.Parse(secondNumber.Text);
+                        result = Math.Round(double.Parse(firstNumber.Text) - double.Parse(secondNumber.Text));
                         break;
                     case "multiply":
-                        result = double.Parse(firstNumber.Text) * double.Parse(secondNumber.Text);
+                        result = Math.Round(double.Parse(firstNumber.Text) * double.Parse(secondNumber.Text));
                         break;
                     case "subdivide":
-                        result = double.Parse(firstNumber.Text) / double.Parse(secondNumber.Text);
+                        result = Math.Round(double.Parse(firstNumber.Text) / double.Parse(secondNumber.Text));
                         break;
                 }
                 answer.Text = result.ToString();
